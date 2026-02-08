@@ -43,8 +43,7 @@ def save_passwords(passwords):
 def add_password():
     site = input("Website: ")
     username = input("Username: ")
-    password = input("Password: ")
-
+    password = hash_text(input("Password: "))
     passwords = load_passwords()
     passwords.append({
         "site": site,
